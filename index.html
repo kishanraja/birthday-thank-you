@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>It's my birtday's Thank You :)</title>
+  <style>
+    body {
+      text-align: left;
+      font-family: Arial, sans-serif;
+      background-image: url('background.jpg');
+      background-size: fill;
+      background-position: center;
+    }
+    
+    h1 {
+      color: #333;
+      font-size: 100px;
+    }
+    
+    input[type="text"] {
+      /* padding: 10px; */
+      background-color: transparent;
+      width: 850px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+      /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+      font-size: 50px;
+      color: #555;
+      font-family: "Times New Roman", serif;
+    }
+
+    .submit-button {
+      border: none;
+      cursor: pointer;
+      background-color: transparent;
+    }
+    
+    .cake-icon {
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    
+    
+    #message {
+      margin-top: 20px;
+      background-color:transparent;
+      border-radius: 5px;
+      padding: 20px;
+      font-size: 50px;
+      color: #333;
+      /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); */
+    }
+
+    #cake-image {
+      margin-top: 10px;
+    }
+
+  </style>
+</head>
+<body>
+    <br>
+    <br>
+  <h1>It's my birtday's<br>Thank You :)</h1>
+  
+  <input type="text" id="nameInput" placeholder="Enter your good name and click on cake :)" />
+  <button class="submit-button" onclick="generateRandomMessage()"><img src="cake.png" alt="Cake" class="cake-icon"></button>
+
+  
+  <div id="message"></div>
+
+  <script>
+    function generateRandomMessage() {
+      var name = document.getElementById("nameInput").value;
+      
+      var messages = [
+        "Thank you for the wonderful birthday wishes, " + name + "!",
+        "I truly appreciate your kind birthday wishes, " + name + "!",
+        "Thanks a lot for remembering my birthday, " + name + "!",
+        "Your birthday wishes made my day extra special, " + name + "!",
+        "I'm grateful for your heartfelt birthday greetings, " + name + "!",
+        "Thank you for the birthday wishes, " + name + "!",
+        "Appreciate your birthday greetings, " + name + "!",
+        "Thanks for making my day special, " + name + "!",
+        "Grateful for your kind birthday wishes, " + name + "!",
+        "Sending you my heartfelt thanks, " + name + "!"
+      ];
+      
+      var randomIndex = Math.floor(Math.random() * messages.length);
+      var randomMessage = messages[randomIndex];
+      
+      document.getElementById("message").innerHTML = randomMessage;
+
+    }
+  </script>
+</body>
+</html>
